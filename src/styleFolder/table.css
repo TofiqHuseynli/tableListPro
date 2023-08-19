@@ -1,0 +1,56 @@
+.table{
+    height: auto;
+    
+    
+}
+.logo{
+    width: 100%;
+    height: 422px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.no-logo{
+    display: none;
+  
+}
+.table-div{
+    padding: 20px;
+    height:auto!important;
+
+}
+
+th,td{
+    border-top: 3px solid #EAEAEA;
+    border-right: 3px solid #EAEAEA;
+    
+}
+th,td:last-child{
+    border-right: 0;
+} 
+
+.header{
+
+    height: 70px;
+    text-align: center;
+}
+
+.header th{
+    margin-left: 40px;
+    font-size: 20px;
+    width: 80px;
+     border-right: 3px solid #EAEAEA;
+     border-top: 0;
+}
+.header th:last-child{
+    border-right: 0;
+} 
+.id{
+    width: 20px!important;
+}
+
+.body-tr{
+    height: 70px;
+    text-align: center;
+
+}

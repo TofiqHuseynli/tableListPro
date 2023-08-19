@@ -1,0 +1,22 @@
+body,*{
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    
+}
+
+.side{
+    width: 250px!important;
+    height: 500px!important;
+}
+
+.input{
+    outline: none;
+}
+.input::placeholder{
+    color:rgb(94, 92, 92);
+    font-weight: 100;
+}
+.btn-color{
+    background-color: #0091E2;
+    color: white;
+}
