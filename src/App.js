@@ -10,13 +10,14 @@ function App() {
       users: [],
       input: "",
       keys: [],
+      checkedIdAll: []
     }
   );
 
   const inputRef = useRef();
 
   const data = async () => {
-    if (state.input == "users" || state.input == "comments") {
+    if (state.input == "users" || state.input == "comments"  || state.input == "todos") {
       const user = await fetch(
         `https://jsonplaceholder.typicode.com/${state.input}`
       );
@@ -24,6 +25,7 @@ function App() {
       setState({ users: userFin });
       inputRef.current.value = "";
       setState({ input: "" });
+      
     } else {
       window.alert("Wrong API");
     }
@@ -33,6 +35,12 @@ function App() {
       const firstObject = state.users[0];
       const key = Object.keys(firstObject);
       setState({ keys: key });
+      if(state.checkedIdAll.length<state.keys.length){
+        state.checkedIdAll.push(...state.keys)
+
+      }
+      
+    
     }
   };
 
@@ -50,7 +58,7 @@ function App() {
           inputRef={inputRef}
           keyCatch={keyCatch}
         />
-        <Body state={state} data={data} />
+        <Body state={state} data={data} setState={setState} />
       </div>
     </div>
   );

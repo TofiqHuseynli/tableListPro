@@ -12,7 +12,7 @@ function Side({ data, setState, inputRef, keyCatch }) {
         placeholder="İnput"
       ></input>
       <button
-        onClick={() => {
+        onMouseDown={() => {
           data();
           keyCatch();
         }}
