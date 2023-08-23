@@ -15,6 +15,7 @@ function Side({ data, setState, inputRef, keyCatch }) {
         onMouseDown={() => {
           data();
           keyCatch();
+          
         }}
         className="btn btn-color"
       >

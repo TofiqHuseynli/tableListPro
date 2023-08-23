@@ -17,27 +17,21 @@ function Body({ state,setState }) {
 
       
 
-      
-        state.keys.forEach(e=>{
-          state.checkedIdAll.forEach(element => {
-            if(element==e){
-              let newArr=[...state.keys]
-              newArr = newArr.filter((item)=> item !== e
-              )
-            // }else{
-            //   state.checkedIdAll.push(...stated.keys)
-            // }
-            
-          });
-
-        })
-       
+      if(state.checkedIdAll.length>0){
+       const tt = [...state.keys,...state.checkedIdAll.filter((item)=>{
+        state.keys.map((i)=>(
+          item !== i
+        ))
+      })] 
+        setState({checkedIdAll:tt})
+     
         
 
-      
-        
+       }else{
+        state.checkedIdAll.push(...state.keys)
 
-       
+       }
+    
    
     } else {
       setStateBody({ checkedAll: false });
@@ -79,7 +73,7 @@ function Body({ state,setState }) {
             <input
               onChange={handleCheckAll}
               checked={
-                state.checkedIdAll.length == state.keys.length
+                state.checkedIdAll.length == state.keys.length && !state.checkedIdAll.length ==0
                   ? true
                   : false
               }

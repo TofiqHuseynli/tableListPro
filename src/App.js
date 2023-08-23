@@ -25,7 +25,6 @@ function App() {
       setState({ users: userFin });
       inputRef.current.value = "";
       setState({ input: "" });
-      
     } else {
       window.alert("Wrong API");
     }
